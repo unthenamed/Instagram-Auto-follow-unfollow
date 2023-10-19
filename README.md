@@ -4,7 +4,7 @@
 # Run
 1. clone the Project and go to the cloned directory
     ```
-    git clone <project_url_here>
+    git clone https://github.com/unthenamed/Instagram-Auto-follow-unfollow
     ```
 2. Install required dependencies
     ```
