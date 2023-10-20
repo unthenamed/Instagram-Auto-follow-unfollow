@@ -4,7 +4,7 @@
 # Run
 1. clone the Project and go to the cloned directory
     ```
-    git clone https://github.com/unthenamed/Instagram-Auto-follow-unfollow
+    git clone https://github.com/unthenamed/Instagram-RoolingFrend
     ```
 2. Install required dependencies
     ```
