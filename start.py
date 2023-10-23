@@ -135,22 +135,24 @@ def loop(element):
 
 
 # Setup credentials
-account_name="" # Change this to your own Instagram username
+account_name="jalil_khoironi" # Change this to your own Instagram username
 account_password="" # Change this to your own Instagram password
 
 
 
 start()
-
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
+    print("[green][+]Workflow Follow mode[/green]")
     mainConfig = "1"
 else :
-if os.path.exists(FALSE_FILE):
-    mainConfig = "0"
-else :                    
-#mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
+    if os.path.exists(FALSE_FILE):
+        print("[green][+]Workflow Unfollow mode[/green]")
+        mainConfig = "0"
+    else :
+        mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
+
 if mainConfig == "0":
     loop(unfollow)
 else:

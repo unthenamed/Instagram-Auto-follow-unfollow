@@ -1,5 +1,4 @@
-### This repository is no longer maintained, Open an issue to get support or feel free to contribute.
-
+[![RoolFrend](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml/badge.svg)](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml)
 
 # Run
 1. clone the Project and go to the cloned directory
