@@ -39,13 +39,13 @@ def unfollow() :
     i = 1
     while i < 31:
         webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
-        sleep(10)
+        sleep(30)
         selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
         selectunfollow.click()
-        delay()
+        sleep(240)
         unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
         unfollowbutton.click()
-        sleep(5)
+        sleep(30)
         i = i + 1
 def start() :
     if os.path.exists(SESSION_FILE):
