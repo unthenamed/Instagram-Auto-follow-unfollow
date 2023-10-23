@@ -1,4 +1,4 @@
-[![RoolFrend](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml/badge.svg?event=workflow_dispatch)](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml)
+[![RoolFrend](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml/badge.svg?event=workflow_run)](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/python-app.yml)
 
 # Run
 1. clone the Project and go to the cloned directory
