@@ -9,7 +9,6 @@ import os
 
 account_name="jalil_khoironi" # Change this to your own Instagram username
 SESSION_FILE = 'cookies.pkl'
-
 display = Display(visible=0, size=(800, 600))
 display.start()
 chromedriver_path ='./chromedriver'
