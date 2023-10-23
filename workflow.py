@@ -25,7 +25,7 @@ def follow() :
 def unfollow() :
     print("[red][+] Open unfollow frend page. [/red]")
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
-    sleep(15)
+    sleep(30)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
     sleep(10)
