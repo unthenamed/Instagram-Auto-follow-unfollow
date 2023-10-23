@@ -18,14 +18,9 @@ webdriver = webdriver.Chrome(service=service, options=options)
 sleep(5)
    
 def follow() :
-    print("[red][+] Open Recommend frend page. [/red]")
     webdriver.get('https://www.instagram.com/explore/people/')
     sleep(30)
-    i = 1
-    followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[3]/div/button/div/div".format(i)
-    namefoxhr = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[2]/div/div/div/span/div/a/div/div/span".format(i)
-    namenow = webdriver.find_element(By.XPATH, namefoxhr).text
-    print("[blue]--> Following {} [/blue]".format(namenow))
+    followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div"
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
 def unfollow() :
@@ -41,7 +36,6 @@ def unfollow() :
 def start() :
     if os.path.exists(SESSION_FILE):
         webdriver.get('https://www.instagram.com/accounts/login/')
-        print("[green][+]login with session...[/green]")
         cookies = pickle.load(open("cookies.pkl", "rb"))
         for cookie in cookies:
             webdriver.add_cookie(cookie) 
@@ -52,11 +46,9 @@ start()
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
-    print("[green][+] Workflow Follow mode[/green]")
     mainConfig = "1"
 else :
     if os.path.exists(FALSE_FILE):
-        print("[green][+] Workflow Unfollow mode[/green]")
         mainConfig = "0"
     else :
         pass
