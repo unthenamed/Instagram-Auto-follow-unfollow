@@ -25,28 +25,22 @@ def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
     delay()
     i = 1
-    while i < 31:
-        followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[3]/div/button/div/div".format(i)
-        namefoxhr = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[2]/div/div/div/span/div/a/div/div/span".format(i)
-        namenow = webdriver.find_element(By.XPATH, namefoxhr).text
-        print("[blue]--> Following {} [/blue]".format(namenow))
-        follownow = webdriver.find_element(By.XPATH, followbutton)
-        follownow.click()
-        delay()
-        i = i + 1 
+    followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[3]/div/button/div/div".format(i)
+    namefoxhr = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[2]/div/div/div/span/div/a/div/div/span".format(i)
+    namenow = webdriver.find_element(By.XPATH, namefoxhr).text
+    print("[blue]--> Following {} [/blue]".format(namenow))
+    follownow = webdriver.find_element(By.XPATH, followbutton)
+    follownow.click()
 def unfollow() :
     print("[red][+] Open unfollow frend page. [/red]")
-    i = 1
-    while i < 31:
-        webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
-        sleep(30)
-        selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
-        selectunfollow.click()
-        sleep(240)
-        unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
-        unfollowbutton.click()
-        sleep(30)
-        i = i + 1
+    webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
+    sleep(30)
+    selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
+    selectunfollow.click()
+    sleep(15)
+    unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
+    unfollowbutton.click()
+    sleep(5)
 def start() :
     if os.path.exists(SESSION_FILE):
         webdriver.get('https://www.instagram.com/accounts/login/')
