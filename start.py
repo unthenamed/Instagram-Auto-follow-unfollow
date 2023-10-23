@@ -141,7 +141,8 @@ account_password="" # Change this to your own Instagram password
 
 
 start()
-mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
+#mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
+mainConfig = "1"
 if mainConfig == "0":
     loop(unfollow)
 else:
