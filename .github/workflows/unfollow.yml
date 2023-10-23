@@ -1,7 +1,7 @@
 name: Unfollow
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/30 */2 * * *'
 
 jobs:
   build:
