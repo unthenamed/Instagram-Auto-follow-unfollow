@@ -42,6 +42,7 @@ def start() :
         pass
 
 start()
+sleep(5)
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
