@@ -1,5 +1,5 @@
 [![Follow](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/follow.yml/badge.svg)](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/follow.yml)
-
+[![Unfollow](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/unfollow.yml/badge.svg)](https://github.com/unthenamed/Instagram-RoolingFrend/actions/workflows/unfollow.yml)
 # Run
 1. clone the Project and go to the cloned directory
     ```
