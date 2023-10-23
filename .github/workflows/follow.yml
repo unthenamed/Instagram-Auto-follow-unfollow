@@ -1,7 +1,6 @@
 name: follow
 on:
   schedule:
-    - cron: '*/6 * * * *'
     - cron: '*/2 * * * *'
 
 jobs:
