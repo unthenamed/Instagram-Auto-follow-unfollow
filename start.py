@@ -136,7 +136,7 @@ def loop(element):
 
 # Setup credentials
 account_name="jalil_khoironi" # Change this to your own Instagram username
-account_password="" # Change this to your own Instagram password
+account_password="xxxxxx" # Change this to your own Instagram password
 
 
 
