@@ -7,7 +7,6 @@ from rich import print
 import pickle
 import os
 
-account_name="jalil_khoironi" # Change this to your own Instagram username
 SESSION_FILE = 'cookies.pkl'
 display = Display(visible=0, size=(800, 600))
 display.start()
@@ -25,10 +24,8 @@ def follow() :
     follownow.click()
 def unfollow() :
     print("[red][+] Open unfollow frend page. [/red]")
-    webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
-    sleep(5)
-    webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
-    sleep(60)
+    webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
+    sleep(15)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
     sleep(10)
