@@ -17,13 +17,11 @@ service = Service(executable_path=chromedriver_path)
 options = webdriver.ChromeOptions()
 webdriver = webdriver.Chrome(service=service, options=options)
 sleep(5)
-
-def delay():
-    sleep(300) #delay in sec   
+   
 def follow() :
     print("[red][+] Open Recommend frend page. [/red]")
     webdriver.get('https://www.instagram.com/explore/people/')
-    delay()
+    sleep(30)
     i = 1
     followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[3]/div/button/div/div".format(i)
     namefoxhr = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[{}]/div/div/div/div[2]/div/div/div/span/div/a/div/div/span".format(i)
