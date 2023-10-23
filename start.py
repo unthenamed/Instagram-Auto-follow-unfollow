@@ -34,7 +34,7 @@ def clear_text(element):
 def login() :
     # Visit loginpage    
     webdriver.get('https://www.instagram.com/accounts/login/')
-    print("[green][+]Waiting Page redy[/green]")
+    print("[green][+] Waiting Page redy[/green]")
     result = input("Press Enter to next setup...")
 
     # Skip the cookie banner
@@ -144,11 +144,11 @@ start()
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
-    print("[green][+]Workflow Follow mode[/green]")
+    print("[green][+] Workflow Follow mode[/green]")
     mainConfig = "1"
 else :
     if os.path.exists(FALSE_FILE):
-        print("[green][+]Workflow Unfollow mode[/green]")
+        print("[green][+] Workflow Unfollow mode[/green]")
         mainConfig = "0"
     else :
         mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
