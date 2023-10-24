@@ -17,7 +17,7 @@ webdriver = webdriver.Chrome(service=service, options=options)
 sleep(5)
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
-    sleep(10)
+    sleep(5)
     followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div"
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
