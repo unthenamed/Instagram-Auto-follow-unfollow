@@ -26,13 +26,13 @@ webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 sleep(5)
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
-    sleep(2)
+    sleep(5)
     followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div"
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
 def unfollow() :
     webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
-    sleep(2)
+    sleep(5)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
     sleep(2)
