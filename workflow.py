@@ -27,16 +27,11 @@ webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 sleep(5)
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
-    sleep(5)
-    followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div"
-    follownow = webdriver.find_element(By.XPATH, followbutton)
-    follownow.click()
+    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div'))).click()
 def unfollow() :
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button'))).click()
-    sleep(2)
-    unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
-    unfollowbutton.click()
+    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]'))).click()
     sleep(2)
 def start() :
     if os.path.exists(SESSION_FILE):
