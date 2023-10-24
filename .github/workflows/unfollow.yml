@@ -1,4 +1,4 @@
-name: unfollow
+name: unfollow roll
 on:
   schedule:
     - cron: '*/1 * * * *'
