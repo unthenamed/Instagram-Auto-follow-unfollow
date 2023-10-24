@@ -1,4 +1,4 @@
-name: unfollow roll
+name: unfollow
 on:
   schedule:
     - cron: '*/1 * * * *'
@@ -17,6 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         touch 0
+        sudo apt-get update
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo dpkg -i google-chrome-stable_current_amd64.deb
         python -m pip install --upgrade pip

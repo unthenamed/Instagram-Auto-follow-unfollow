@@ -1,3 +1,4 @@
 selenium
 pyvirtualdisplay
+webdriver-manager
 rich==13.5.2

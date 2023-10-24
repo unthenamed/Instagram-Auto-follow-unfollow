@@ -1,5 +1,7 @@
-from pyvirtualdisplay import Display
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.core.utils import ChromeType
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from time import sleep
@@ -7,13 +9,20 @@ import pickle
 import os
 
 SESSION_FILE = 'cookies.pkl'
-display = Display(visible=0, size=(1600, 1600))
-display.start()
-chromedriver_path ='./chromedriver'
-service = Service(executable_path=chromedriver_path)
-options = webdriver.ChromeOptions()
-options.add_argument("--window-size=1024,1024")
-webdriver = webdriver.Chrome(service=service, options=options)
+chrome_service = Service(ChromeDriverManager().install())
+chrome_options = Options()
+options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1024,1024",
+    "--ignore-certificate-errors",
+    "--disable-extensions",
+    "--no-sandbox",
+    "--disable-dev-shm-usage"
+]
+for option in options:
+    chrome_options.add_argument(option)
+webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 sleep(5)
 def poppup() :
     try:
