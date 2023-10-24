@@ -8,11 +8,12 @@ import pickle
 import os
 
 SESSION_FILE = 'cookies.pkl'
-display = Display(visible=0, size=(800, 1600))
+display = Display(visible=0, size=(1600, 1600))
 display.start()
 chromedriver_path ='./chromedriver'
 service = Service(executable_path=chromedriver_path)
 options = webdriver.ChromeOptions()
+options.add_argument("--window-size=1024,1024")
 webdriver = webdriver.Chrome(service=service, options=options)
 sleep(5)
    
@@ -25,7 +26,7 @@ def follow() :
 def unfollow() :
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
     sleep(30)
-    selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
+    selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
     sleep(5)
     unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
