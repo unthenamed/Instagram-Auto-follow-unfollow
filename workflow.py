@@ -16,7 +16,6 @@ options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1024,1024")
 webdriver = webdriver.Chrome(service=service, options=options)
 sleep(5)
-   
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
     sleep(15)
@@ -40,8 +39,6 @@ def start() :
             webdriver.add_cookie(cookie) 
     else :
         pass
-
-start()
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
@@ -51,7 +48,7 @@ else :
         mainConfig = "0"
     else :
         mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
-
+start()
 if mainConfig == "0":
     unfollow()
 else:
