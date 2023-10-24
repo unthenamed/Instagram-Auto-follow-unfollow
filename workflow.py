@@ -14,7 +14,7 @@ chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
 options = [
     "--headless",
-    "--disable-gpu",
+#    "--disable-gpu",
     "--window-size=360,640",
     "--ignore-certificate-errors",
     "--disable-extensions",
