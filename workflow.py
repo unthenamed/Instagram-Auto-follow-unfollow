@@ -18,17 +18,17 @@ sleep(5)
    
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
-    sleep(30)
+    sleep(15)
     followbutton = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div"
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
 def unfollow() :
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
-    sleep(30)
+    sleep(15)
     suf = "/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div"
     selectunfollow = webdriver.find_element(By.XPATH, suf)
     selectunfollow.click()
-    sleep(10)
+    sleep(5)
     unfollowbutton = webdriver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]')
     unfollowbutton.click()
     sleep(5)
@@ -42,7 +42,6 @@ def start() :
         pass
 
 start()
-sleep(5)
 TRUE_FILE = "1"
 FALSE_FILE = "0"
 if os.path.exists(TRUE_FILE):
