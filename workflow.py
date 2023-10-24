@@ -59,6 +59,7 @@ else :
     else :
         mainConfig = input("  () Auto Follow or Unfollow? 1=follow;0=unfollow :")
 start()
+sleep(5)
 if mainConfig == "0":
     unfollow()
 else:
