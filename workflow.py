@@ -8,7 +8,7 @@ import pickle
 import os
 
 SESSION_FILE = 'cookies.pkl'
-display = Display(visible=0, size=(720, 1600))
+display = Display(visible=0, size=(800, 1600))
 display.start()
 chromedriver_path ='./chromedriver'
 service = Service(executable_path=chromedriver_path)
