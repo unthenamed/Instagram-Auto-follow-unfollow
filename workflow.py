@@ -23,7 +23,7 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-sleep(2)
+sleep(5)
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
     sleep(2)
