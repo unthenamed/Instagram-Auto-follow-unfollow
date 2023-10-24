@@ -13,7 +13,7 @@ chrome_options = Options()
 options = [
     "--headless",
     "--disable-gpu",
-#    "--window-size=1024,1024",
+    "--window-size=1024,1024",
     "--ignore-certificate-errors",
     "--disable-extensions",
     "--no-sandbox",
