@@ -31,7 +31,7 @@ def follow() :
     follownow.click()
 def unfollow() :
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
-    sleep(10)
+    sleep(5)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button')
     selectunfollow.click()
     sleep(2)
