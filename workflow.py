@@ -6,8 +6,10 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import pickle
 import os
+
 account_name="jalil_khoironi"
 SESSION_FILE = 'cookies.pkl'
+
 chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
 options = [
