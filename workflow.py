@@ -14,7 +14,7 @@ chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
 options = [
     "--headless",
-#    "--disable-gpu",
+    "--disable-gpu",
     "--window-size=360,640",
     "--ignore-certificate-errors",
     "--disable-extensions",
@@ -33,7 +33,7 @@ def follow() :
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
 def unfollow() :
-    webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
+    webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
     sleep(5)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
