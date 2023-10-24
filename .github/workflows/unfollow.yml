@@ -1,5 +1,9 @@
 name: unfollow
 on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   schedule:
     - cron: '*/1 * * * *'
 
