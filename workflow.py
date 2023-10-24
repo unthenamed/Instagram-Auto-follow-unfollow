@@ -11,13 +11,14 @@ SESSION_FILE = 'cookies.pkl'
 chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
 options = [
-    "--headless",
+#    "--headless",
     "--disable-gpu",
-    "--window-size=1024,1024",
+#    "--window-size=1024,1024",
     "--ignore-certificate-errors",
     "--disable-extensions",
     "--no-sandbox",
-    "--disable-dev-shm-usage"
+    "--disable-dev-shm-usage",
+    "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1"
 ]
 for option in options:
     chrome_options.add_argument(option)
@@ -42,6 +43,7 @@ def follow() :
     follownow.click()
 def unfollow() :
     webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
+    sleep(10)
     poppup()
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[5]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div[1]/div/div/div/div[3]/div/button')
     selectunfollow.click()
