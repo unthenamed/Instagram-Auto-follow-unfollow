@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import pickle
 import os
-
+account_name="jalil_khoironi"
 SESSION_FILE = 'cookies.pkl'
 chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
@@ -31,7 +31,7 @@ def follow() :
     follownow = webdriver.find_element(By.XPATH, followbutton)
     follownow.click()
 def unfollow() :
-    webdriver.get('https://www.instagram.com/jalil_khoironi/following/')
+    webdriver.get('https://www.instagram.com/{}/following/'.format(account_name))
     sleep(5)
     selectunfollow = webdriver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button/div/div')
     selectunfollow.click()
