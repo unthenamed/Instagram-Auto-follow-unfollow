@@ -1,4 +1,4 @@
-name: UNFOLLOW
+name: unfollow
 on:
   schedule:
     - cron: '*/1 * * * *'

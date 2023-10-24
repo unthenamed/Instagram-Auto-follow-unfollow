@@ -1,4 +1,4 @@
-name: FOLLOW
+name: follow
 on:
   schedule:
     - cron: '*/1 * * * *'
