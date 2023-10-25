@@ -27,7 +27,8 @@ webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 sleep(5)
 
 def tekan():
-    WebDriverWait(webdriver, 60).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div[1]/div/div[2]/div/div[3]/div[1]/div[1]/span/div/div'))).click()    
+    WebDriverWait(webdriver, 60).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div[1]/div/div[2]/div/div[3]/div[1]/div[1]/span/div/div'))).click()
+    WebDriverWait(webdriver, 60).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div'))).click()
 
 def start() :
     if os.path.exists(SESSION_FILE):
@@ -38,8 +39,6 @@ def start() :
         webdriver.get('https://www.instagram.com/reels/')
     else :
         pass
-
-love = '//*[@id="react-root"]/div[3]/div[1]/div[1]/span/div/div/span/svg'
 
 start()
 tekan()
