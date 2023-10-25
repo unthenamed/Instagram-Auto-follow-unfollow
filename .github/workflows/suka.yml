@@ -1,8 +1,12 @@
-name: unfollow
+name: Suka
 on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   schedule:
-    - cron: '*/1 * * * *'
     - cron: '*/5 * * * *'
+    - cron: '*/1 * * * *'
 
 jobs:
   build:
@@ -19,10 +23,8 @@ jobs:
     - run: chrome --version
     - name: Install dependencies
       run: |
-        touch 0
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: RoolFrend
       run: |
-        python workflow.py
-        rm 0
+        python suka.py
