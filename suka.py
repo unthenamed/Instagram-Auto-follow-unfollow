@@ -42,4 +42,4 @@ def start() :
 
 start()
 tekan()
-sleep(5)
+sleep(30)
