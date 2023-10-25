@@ -12,7 +12,7 @@ SESSION_FILE = 'cookies.pkl'
 chrome_service = Service(ChromeDriverManager().install())
 chrome_options = Options()
 options = [
-#    "--headless",
+    "--headless",
     "--disable-gpu",
     "--window-size=360,640",
     "--ignore-certificate-errors",
