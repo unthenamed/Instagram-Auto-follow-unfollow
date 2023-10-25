@@ -27,7 +27,7 @@ webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 sleep(5)
 
 def tekan():
-    WebDriverWait(webdriver, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="react-root"]/div[3]/div[1]/div[1]/span/div/div/span/svg'))).click()    
+    WebDriverWait(webdriver, 60).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div[1]/div/div[2]/div/div[3]/div[1]/div[1]/span/div/div'))).click()    
 
 def start() :
     if os.path.exists(SESSION_FILE):
@@ -43,4 +43,4 @@ love = '//*[@id="react-root"]/div[3]/div[1]/div[1]/span/div/div/span/svg'
 
 start()
 tekan()
-sleep(30)
+sleep(5)
