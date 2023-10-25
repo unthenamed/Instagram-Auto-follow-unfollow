@@ -24,7 +24,6 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 webdriver = webdriver.Chrome(service=chrome_service, options=chrome_options)
-sleep(5)
 def follow() :
     webdriver.get('https://www.instagram.com/explore/people/')
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[2]/div/div/div[1]/div/div/div/div[3]/div/button/div/div'))).click()
@@ -32,7 +31,6 @@ def unfollow() :
     webdriver.get('https://www.instagram.com/unthenamed/following/')
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div/button'))).click()
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]'))).click()
-    sleep(2)
 def start() :
     if os.path.exists(SESSION_FILE):
         webdriver.get('https://www.instagram.com/accounts/login/')
